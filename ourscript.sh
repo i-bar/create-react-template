@@ -1,6 +1,11 @@
 
 echo 'here we go'
 SCRIPT_DIR=$(cd "$(dirname "$0")"; pwd)
+ls -alh $SCRIPT_DIR
+echo '==='
+ls -alh $SCRIPT_DIR/../
+
+exit 0
 
 # Read app name
 APP_NAME="$1"
