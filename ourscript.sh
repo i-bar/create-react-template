@@ -1,11 +1,14 @@
 
 echo 'here we go'
 SCRIPT_DIR=$(cd "$(dirname "$0")"; pwd)
-ls -alh $SCRIPT_DIR
+LINK_DIR=$(pwd $(readlink $SCRIPT_DIR/ourscript.sh))
+echo "$(dirname "$0")"
+echo "script ran from dir: $SCRIPT_DIR"
+echo "link dir: $LINK_DIR"
 echo '==='
-ls -alh $SCRIPT_DIR/../
-
-exit 0
+ls -alh $LINK_DIR
+echo '==='
+ls -alh $LINK_DIR/../
 
 # Read app name
 APP_NAME="$1"
@@ -17,7 +20,7 @@ create-react-app $APP_NAME
 # Cleanup
 cd $APP_NAME
 rm src/logo.svg
-rsync -au $SCRIPT_DIR/templates/ ./
+rsync -au $LINK_DIR/templates/ ./
 
 
 echo 'here we went'
