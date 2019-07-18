@@ -1,6 +1,7 @@
 {
   "name": "learn-npx",
-  "version": "1.0.0",
+  "repository": "i-bar/learn-npx",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
