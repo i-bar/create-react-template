@@ -1,8 +1,8 @@
 {
   "name": "learn-npx",
-  "bin": "exec.js",
+  "bin": "ourscript.sh",
   "repository": "i-bar/learn-npx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
