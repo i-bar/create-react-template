@@ -9,5 +9,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-push": "git stash save pre-push-stash && CI=true npm test || (git stash pop  && exit 1)",
+      "post-push": "git stash pop "
+    }
+  }
 }
