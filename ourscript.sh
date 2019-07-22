@@ -12,7 +12,7 @@ rm src/App.js  # Will be replaced by a new App.jsx
 
 # Copy template files to the app
 SCRIPT_DIR=$(dirname "$0")
-LINK_DIR=$(dirname $(readlink $SCRIPT_DIR/learn-npx))
+LINK_DIR=$(dirname $(readlink $SCRIPT_DIR/create-react-template))
 rsync -au $SCRIPT_DIR/$LINK_DIR/templates/ ./
 
 # Install useful packages

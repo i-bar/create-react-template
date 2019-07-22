@@ -1,7 +1,7 @@
 {
-  "name": "learn-npx",
+  "name": "create-react-template",
   "bin": "ourscript.sh",
-  "repository": "i-bar/learn-npx",
+  "repository": "i-bar/create-react-template",
   "version": "1.0.7",
   "description": "",
   "main": "index.js",
