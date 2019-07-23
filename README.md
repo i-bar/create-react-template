@@ -1,4 +1,4 @@
-# Create React Template
+# Create React Sensible Defaults
 
 ## Purpose
 
