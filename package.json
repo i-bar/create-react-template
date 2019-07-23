@@ -2,7 +2,7 @@
   "name": "create-react-template",
   "bin": "generate.sh",
   "repository": "i-bar/create-react-template",
-  "version": "1.0.7",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
