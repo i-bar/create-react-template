@@ -1,6 +1,6 @@
 {
   "name": "create-react-template",
-  "bin": "ourscript.sh",
+  "bin": "generate.sh",
   "repository": "i-bar/create-react-template",
   "version": "1.0.7",
   "description": "",
