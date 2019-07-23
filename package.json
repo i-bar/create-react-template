@@ -1,7 +1,7 @@
 {
-  "name": "create-react-template",
+  "name": "create-react-sensible-defaults",
   "bin": "generate.sh",
-  "repository": "i-bar/create-react-template",
+  "repository": "i-bar/create-react-sensible-defaults",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

@@ -11,7 +11,7 @@ This project was created to automatically perform all that manual work 😉.
 From bash
 
 ```
-npx create-react-template myAwesomeApp
+npx create-react-sensible-defaults myAwesomeApp
 ```
 
 ## How it works
