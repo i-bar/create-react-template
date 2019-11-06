@@ -2,17 +2,12 @@
   "name": "create-react-sensible-defaults",
   "bin": "generate.sh",
   "repository": "i-bar/create-react-sensible-defaults",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create a react app with some extra sensible defaults",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "i-bar",
-  "license": "ISC",
-  "husky": {
-    "hooks": {
-      "pre-push": "CI=true npm test"
-    }
-  }
+  "license": "ISC"
 }
