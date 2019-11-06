@@ -2,18 +2,17 @@
   "name": "create-react-sensible-defaults",
   "bin": "generate.sh",
   "repository": "i-bar/create-react-sensible-defaults",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Create a react app with some extra sensible defaults",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "i-bar",
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-push": "git stash save pre-push-stash && CI=true npm test || (git stash pop  && exit 1)",
-      "post-push": "git stash pop "
+      "pre-push": "CI=true npm test"
     }
   }
 }
