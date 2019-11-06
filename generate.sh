@@ -15,18 +15,11 @@ SCRIPT_DIR=$(dirname "$0")
 LINK_DIR=$(dirname $(readlink $SCRIPT_DIR/create-react-sensible-defaults))
 rsync -au $SCRIPT_DIR/$LINK_DIR/templates/ ./
 
-# Install useful packages
-npm install -D enzyme eslint-plugin-prettier husky prettier
-
-# Add pre-push and post-push hooks to run tests
-PRE_PUSH_COMMAND="git stash save pre-push-stash && CI=true npm test || \$(git stash pop \$(git stash list | grep pre-push-stash | cut -d: -f1) && exit 1)"
-POST_PUSH_COMMAND="git stash pop \$(git stash list | grep pre-push-stash | cut -d: -f1)"
-
+# Add pre-push hook to run tests
 cat package.json | npx json . -e "
 this.husky={};
 this.husky.hooks={
-  'pre-push': \"${PRE_PUSH_COMMAND}\",
-  'post-push': \"${POST_PUSH_COMMAND}\"
+  'pre-push': \"CI=true npm test\"
 };" > package_with_hook.json
 
 rm package.json
@@ -34,4 +27,4 @@ mv package_with_hook.json package.json
 
 # Commit the changes on top of the Create React App initial commit
 git add .
-git commit -qm "Updated / cleaned-up Create React App files."
+git commit -m "Updated / cleaned-up Create React App files."
